@@ -3,9 +3,15 @@ import styled from 'styled-components/native'
 export const PrincipalContainer = styled.View`
 	width: 100%;
 	height: 100%;
-	background-color: #FBFBFB;
-	margin-vertical: 7%;
+	background-color: #f0f0f0;
+	margin-vertical: 5%;
 	align-items: center;
+`;
+
+export const ScrollViewSection = styled.ScrollView`
+	width: 100%;
+	height: 100%;
+	background-color: #f0f0f0;
 `;
 
 export const ImageUser = styled.Image`
@@ -27,18 +33,15 @@ export const CardPerson = styled.View`
 	shadow-color: #000;
   shadow-offset: {
     height: 0;
-    width: 3;
+    width: 1;
   }
-  shadow-opacity: 0.29;
-  shadow-radius: 4.65;
+  shadow-opacity: 0.10;
+  shadow-radius: 3.65;
   /* Shadow */
 `;
 
 export const TextName = styled.Text`
-`;
-
-
-export const TextLastName = styled.Text`
+	font-size: 20px;
 `;
 
 export const ContainerData = styled.View`
@@ -51,4 +54,6 @@ export const TextContainer = styled.View`
 
 export const TextEmail = styled.Text`
 	margin-left: 6%;
+	font-size: 14px;
+	color: #b5b5b5;
 `;

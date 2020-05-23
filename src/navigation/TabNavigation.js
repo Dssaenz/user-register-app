@@ -13,9 +13,9 @@ function TabNavigation() {
           tabBarIcon: ({ focused, color, size }) => {
             let iconName;
 
-            if (route.name === 'ListUsers') {
+            if (route.name === 'Users') {
               iconName = focused ? 'md-list-box' : 'md-list-box';
-            } else if (route.name === 'CreateUser') {
+            } else if (route.name === 'Create user') {
               iconName = focused ? 'md-person-add' : 'md-person-add';
             }
 
@@ -28,8 +28,8 @@ function TabNavigation() {
           inactiveTintColor: 'gray',
         }}
       >
-        <Tab.Screen name="ListUsers" component={ListUsers} />
-        <Tab.Screen name="CreateUser" component={CreateUser} />
+        <Tab.Screen name="Users" component={ListUsers} />
+        <Tab.Screen name="Create user" component={CreateUser} />
       </Tab.Navigator>
   );
 }
