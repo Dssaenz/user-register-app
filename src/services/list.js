@@ -7,7 +7,7 @@ async function callApi(endpoint) {
   return data;
 }
 
-const api = {
+const listUsers = {
   users: {
     list() {
       return callApi('/users');
@@ -15,4 +15,4 @@ const api = {
   },
 };
 
-export default api;
+export default listUsers;
