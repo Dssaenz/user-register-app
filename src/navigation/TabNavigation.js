@@ -4,6 +4,8 @@ import { Ionicons } from '@expo/vector-icons';
 
 import { ListUsers, CreateUser } from '../screens';
 
+import theme from '../themes';
+
 const Tab = createBottomTabNavigator();
 
 function TabNavigation() {
@@ -24,8 +26,8 @@ function TabNavigation() {
 				})}
 				
         tabBarOptions={{
-          activeTintColor: '#FA4D61',
-          inactiveTintColor: 'gray',
+          activeTintColor: theme.color.pink,
+          inactiveTintColor: theme.color.darkGrey,
         }}
       >
         <Tab.Screen name="Users" component={ListUsers} />

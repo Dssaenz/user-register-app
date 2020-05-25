@@ -1,18 +1,13 @@
 import React from 'react';
-import {  Text, ScrollView  } from 'react-native';
+import {  Text  } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 import {
 	PrincipalContainer,
 	ScrollViewSection,
-	ImageUser,
-	CardPerson,
-	TextName,
-	ContainerData,
-	TextContainer,
-	TextEmail
 } from './styles';
 
+import { CardPerson, Loader } from '../../components';
 import listUsers from '../../services/list';
 
 class ListUsers extends React.Component {
@@ -43,25 +38,21 @@ class ListUsers extends React.Component {
 	render(){
 		const { loading, data } = this.state;
 		if(loading === true || data === undefined){
-			return <Text>Cargando...</Text>
+			return <Loader />
 		}
 	
 		return(
 			<SafeAreaView>
 				<ScrollViewSection>
 					<PrincipalContainer>
-					{data.data.map(item => (
-						<CardPerson>
-							<ImageUser source={{ uri: item.avatar}} />
-							<ContainerData>
-								<TextContainer>
-									<TextName>{item.first_name} </TextName>
-									<TextName>{item.last_name}</TextName>
-								</TextContainer>
-								<TextEmail>{item.email}</TextEmail>
-							</ContainerData>
-						</CardPerson>
-					))}
+						{data.data.map(item => (
+							<CardPerson 
+								avatar={item.avatar}
+								first_name={item.first_name}
+								last_name={item.last_name}
+								email={item.email}
+							/> 
+						))}
 					</PrincipalContainer>
 				</ScrollViewSection>
 			</SafeAreaView>

@@ -1,19 +1,16 @@
 //--- With Hooks ---//
 import React, { useEffect } from 'react';
-import { View, TextInput, Alert } from 'react-native';
-import { SafeAreaView } from 'react-native-safe-area-context';
 import { useForm } from 'react-hook-form';
+import { SafeAreaView } from 'react-native-safe-area-context';
 import { MaterialIcons, AntDesign } from '@expo/vector-icons';
 
 import {
+	PrincipalContainer,
+	ScrollViewSection,
 	ContentTitle,
 	Title,
 	TitleStrong,
 	Text,
-	PrincipalContainer,
-	ScrollViewSection,
-	Button,
-	TextButton,
 	TitleText,
 	SectionForm,
 	ContainerLabel,
@@ -21,6 +18,7 @@ import {
 }
 from './styles';
 
+import { Input, Button } from '../../components';
 import onSubmit from '../../services/create';
 
 function CreateUser() {
@@ -45,25 +43,21 @@ function CreateUser() {
 							<MaterialIcons name="person-pin" size={32} color="black" />
 							<ContainerLabel>
 								<TitleText>Name</TitleText>
-								<TextInput placeholder='Darwin Sáenz' onChangeText={text => {
+								<Input placeholder='Darwin Sáenz' onChangeText={text => {
 									setValue('name', text)
 								}} />
 							</ContainerLabel>
 						</SectionForm>
-						
 						<SectionFormTop>
 							<AntDesign name="rocket1" size={32} color="black" />
 							<ContainerLabel>
 								<TitleText>Job</TitleText>
-								<TextInput placeholder='Frontend Developer' onChangeText={text => {
+								<Input placeholder='Frontend Developer' onChangeText={text => {
 									setValue('job', text)
 								}} />
 							</ContainerLabel>
 						</SectionFormTop>
-						
-						<Button onPress={handleSubmit(onSubmit)}>
-							<TextButton>Create</TextButton>
-						</Button>
+						<Button onPress={handleSubmit(onSubmit)} text='Create' />
 				</PrincipalContainer>
 			</ScrollViewSection>
 		</SafeAreaView>
@@ -71,55 +65,3 @@ function CreateUser() {
 }
 
 export default CreateUser;
-
-//--- With Class Component ---//
-
-// import React from 'react';
-// import { View, Text, TextInput, Button } from 'react-native';
-// import { SafeAreaView } from 'react-native-safe-area-context';
-
-// class CreateUser extends React.Component {
-//   state = {
-//     name: '',
-//     job: ''
-//   }
-
-//   async onSubmit() {
-//     const url = 'https://reqres.in/api/users'
-// 		const data = {
-// 			name: this.state.name,
-// 			job: this.state.job,
-// 		}
-// 		fetch(url, {
-//       method: 'POST',
-//       body: JSON.stringify(data),
-//       headers:{
-//         'Content-Type': 'application/json'
-//       }
-// 		})
-// 		.then(res => res.json())
-//     .catch(error => console.error('Error:', error))
-//     .then(response => console.log('Success:', response));
-//   }
-//   render(){
-//     console.log(this.state.name)  
-//     console.log(this.state.job)
-//     const { name, job } = this.state;
-//     return(
-//       <SafeAreaView>
-//         <View>
-//           <Text>Nombre</Text>
-//           <TextInput onChangeText={name => this.setState({name})} value={name} />
-//           <Text>Trabajo</Text>
-//           <TextInput onChangeText={job => this.setState({job})} value={job} />
-//           <Button
-//             title='Crear'
-//             onPress={() => this.onSubmit()} 
-//           />
-//         </View>
-//       </SafeAreaView>
-//     )
-//   }
-// }
-
-// export default CreateUser;

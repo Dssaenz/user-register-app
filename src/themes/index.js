@@ -1,32 +1,30 @@
 const theme = {
   color: {
-    dark: '#000000',
     snow: '#FFFFFF',
-    grey: '#9ab0b8',
-    violet: '#A263EF',
-    darkViolet: '#48486E',
-    whiteBlue: '#97CDFB',
-    blue: '#679CE9',
-    darkBlue: '#304483',
-    orange: '#F2801C',
-    yellow: '#FBDB4C',
+    darkSnow: '#f0f0f0',
+    dark: '#000000',
+    pink: '#FA4D61',
+    grey: '#b3b1b1',
+    darkGrey: '#b5b5b5',
   },
   margin: {
-
+    marginStandard: '3%',
+    marginMedium: '4%',
+    marginLarge:'5%',
+    marginXL: '6%',
   },
   padding: {
-
+    paddingStandard: '3%',
+    paddingMedium: '4%',
+    paddingLarge: '5%',
+    paddingXL: '6%',
   },
   size: {
-    h1: '3rem',
-    h2: '2.7rem',
-    h3:'2.5rem',
-    h4: '1.5rem',
-    h5:'1rem',
-    btn: '',
-    p: '15px',
-    pd: '',
-    pds: '',
+    h1: '25px',
+    h2: '20px',
+    p: '17px',
+    pd: '16px',
+    pds: '14px',
   }
 }
 
