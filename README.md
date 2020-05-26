@@ -8,10 +8,8 @@ To view the proyect:
 
 Android:
 
-<img src="sources/listAndroid.jpeg" width="200">
-<img src="sources/createAndroid.jpeg" width="200">
+<img src="sources/listAndroid.jpeg" width="400"> <img src="sources/createAndroid.jpeg" width="400">
 
 Ios:
 
-<img src="sources/listIos.png" width="200">
-<img src="sources/createIos.png" width="200">
+<img src="sources/listIos.png" width="400"> <img src="sources/createIos.png" width="400">
