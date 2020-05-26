@@ -3,14 +3,14 @@ import styled from  'styled-components/native'
 export const ScrollViewSection = styled.ScrollView`
 	width: 100%;
 	height: 100%;
-	background-color: #f0f0f0;
+	background-color: ${props => props.theme.color.darkSnow};
 `;
 
 export const PrincipalContainer = styled.View`
 	width: 100%;
 	height: 100%;
-	background-color: #f0f0f0;
-	margin-vertical: 5%;
+	background-color: ${props => props.theme.color.darkSnow};
+	margin-vertical: ${props => props.theme.margin.marginLarge};
 	padding-top: 10%;
 	padding-horizontal: 10%;
 `;
@@ -20,25 +20,25 @@ export const ContentTitle = styled.View`
 `;
 export const Title = styled.Text`
 	font-weight: bold;
-	font-size: 25px;
+	font-size: ${props => props.theme.size.h1};
 `;
 export const TitleStrong = styled.Text`
 	font-weight: bold;
-	font-size: 25px;
-	color: #FA4D61;
-	margin-left: 3%;
+	font-size: ${props => props.theme.size.h1};
+	color: ${props => props.theme.color.pink};
+	margin-left: ${props => props.theme.margin.marginStandard};
 `;
 export const Text = styled.Text`
-	font-size: 16px;
-	color: #b3b1b1;
-	margin-top: 4%;
+	font-size: ${props => props.theme.size.pd};
+	color: ${props => props.theme.color.grey};
+	margin-top: ${props => props.theme.margin.marginMedium};
 	margin-bottom: 10%;
 `;
 
 export const Button = styled.TouchableOpacity.attrs({
   activeOpacity: 0.4,
 })`
-	background-color: #FA4D61;
+	background-color: ${props => props.theme.color.pink};
   width: 100%;
   height: 45px;
   justify-content: center;
@@ -48,13 +48,13 @@ export const Button = styled.TouchableOpacity.attrs({
 `;
 
 export const TextButton = styled.Text`
-	color: #FFFFFF;
-	font-size: 17px;
+	color: ${props => props.theme.color.snow};
+	font-size: ${props => props.theme.size.p};
 	font-weight: bold;
 `;
 
 export const TitleText = styled.Text`
-	font-size: 16px;
+	font-size: ${props => props.theme.size.pd};
 `;
 
 export const SectionForm = styled.View`
@@ -67,14 +67,14 @@ export const SectionFormTop = styled.View`
 	width: 90%;
 	flex-direction: row;
 	align-items: center;
-	margin-top: 4%;
+	margin-top: ${props => props.theme.margin.marginMedium};
 	margin-bottom: 20%;
 
 `;
 
 export const ContainerLabel = styled.View`
-	margin-left: 6%;
+	margin-left: ${props => props.theme.margin.marginXL};
 	border-left-width: 1px;
-	padding-left: 4%;
-	border-color: #b3b1b1;
+	padding-left: ${props => props.theme.padding.paddingMedium};
+	border-color: ${props => props.theme.color.grey};
 `;
